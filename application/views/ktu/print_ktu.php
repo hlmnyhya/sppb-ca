@@ -172,7 +172,7 @@
                 echo '<hr size="" color="black" style="margin-top: 1px;">';
                 echo '<h5 style="margin-top: px; text-align: center">Kadiv Harnik</h5>';
             }
-        } elseif ($status == 'Diperiksa') {
+        } elseif ($status == 'Disetujui') {
             echo '<h5>Diajukan,</h5>';
             echo '<img src="' . base_url('./uploads/ttd/' .$t->ttd_pemohon) . '" alt="user" class="rounded-circle" width="200">';
             echo '<h5 style="margin-top: 2px; text-align: center">Saul Membi Sembiring</h5>';
