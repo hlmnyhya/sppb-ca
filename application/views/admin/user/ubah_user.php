@@ -32,6 +32,7 @@
              <form id="formTambahDivisi" action="<?= base_url('edit_user')?>" method="POST" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="nama">Nama</label>
+                    <input type="hidden" class="form-control" id="nama" name="id_users" value="<?= $user->id_users; ?>" placeholder="Masukkan Nama" required>
                     <input type="text" class="form-control" id="nama" name="nama" value="<?= $user->nama; ?>" placeholder="Masukkan Nama" required>
                 </div>
                 <div class="form-group">

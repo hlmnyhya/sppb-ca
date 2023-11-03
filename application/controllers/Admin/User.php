@@ -148,7 +148,7 @@ class User extends CI_Controller {
 
  public function update_data_aksi() 
 {
-    $id_user = $this->input->post('id_user');
+    $id_user = $this->input->post('id_users');
     $nama = htmlspecialchars($this->input->post('nama'));
     $nip = htmlspecialchars($this->input->post('nip'));
     $id_divisi = htmlspecialchars($this->input->post('id_divisi'));
@@ -209,7 +209,7 @@ class User extends CI_Controller {
         $data['gambar_ttd'] = $gambar_ttd;
     }
 
-    $where = array('id_user' => $id_user);
+    $where = array('id_users' => $id_user);
 
     // Melakukan update data ke dalam database
     $updated = $this->M_users->update_data('users', $data, $where);

@@ -46,6 +46,7 @@
                     </thead>
                     <tbody>
                         <?php $no=1; foreach ($permohonan as $user): ?>
+                            <?php if ($user->nama_pemohon == $this->session->userdata('nama')): ?>
                         <tr>
                             <td><?php echo $no++ ?></td>    
                             <td><?php echo $user->nomor_sppb; ?></td>
@@ -63,6 +64,7 @@
                               <a href="<?php echo base_url('users_permohonan_users/detail/'.$user->id_permohonan); ?>" class="btn btn-info"><i class="mdi mdi-eye"></i><span>Detail</span></a>
                             </td>
                         </tr>
+                        <?php endif;?>
                         <?php endforeach;?>
                     </tbody>
                     <tfoot>
