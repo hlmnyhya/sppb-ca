@@ -30,7 +30,6 @@
                             <th>Item</th>
                             <th>Sub Item</th>
                             <th>Satuan</th>
-                            <th>Stok</th>
                             <th>Fisik</th>
                             <th>Uraian</th>
                             <th>Keterangan</th>
@@ -45,7 +44,6 @@
                             <td><?php echo $user->nama_item; ?></td>
                             <td><?php echo $user->nama_sub_item; ?></td>
                             <td><?php echo $user->satuan; ?></td>
-                            <td><?php echo $user->stok; ?></td>
                             <td><?php echo $user->fisik; ?></td>
                             <td><?php echo $user->uraian; ?></td>
                             <td><?php echo $user->keterangan; ?></td>
@@ -64,7 +62,6 @@
                             <th>Item</th>
                             <th>Sub Item</th>
                             <th>Satuan</th>
-                            <th>Stok</th>
                             <th>Fisik</th>
                             <th>Uraian</th>
                             <th>Keterangan</th>

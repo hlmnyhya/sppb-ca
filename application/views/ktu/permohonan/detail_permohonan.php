@@ -28,7 +28,6 @@
                             <th>No</th>
                             <th>Kode</th>
                             <th>Satuan</th>
-                            <th>Stok</th>
                             <th>Fisik</th>
                             <th>Uraian</th>
                             <th>Keterangan</th>
@@ -40,7 +39,6 @@
                             <td><?php echo $no++ ?></td>    
                             <td><?php echo $user->kode; ?></td>
                             <td><?php echo $user->satuan; ?></td>
-                            <td><?php echo $user->stok; ?></td>
                             <td><?php echo $user->fisik; ?></td>
                             <td><?php echo $user->uraian; ?></td>
                             <td><?php echo $user->keterangan; ?></td>
@@ -55,10 +53,9 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                           <th>No</th>
+                          <th>No</th>
                             <th>Kode</th>
                             <th>Satuan</th>
-                            <th>Stok</th>
                             <th>Fisik</th>
                             <th>Uraian</th>
                             <th>Keterangan</th>

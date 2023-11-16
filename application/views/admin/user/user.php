@@ -95,53 +95,76 @@
             </div>
             <div class="modal-body">
                 <!-- Form Tambah Divisi -->
-            <form id="formTambahDivisi" action="<?= base_url('tambah_user')?>" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" required>
-                </div>
-                <div class="form-group">
-                    <label for="nip">NIP</label>
-                    <input type="text" class="form-control" id="nip" name="nip" placeholder="Masukkan NIP" required>
-                </div>
-                <div class="form-group">
-                    <label for="id_divisi">Level</label>
-                    <select class="form-control" id="id_divisi" name="id_level" required>
-                        <option value="">Pilih Level</option>
-                        <?php foreach ($level as $row): ?>
-                            <option value="<?= $row->id_level; ?>"><?= $row->level; ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="id_divisi">Divisi</label>
-                    <select class="form-control" id="id_divisi" name="id_divisi" required>
-                        <option value="">Pilih Divisi</option>
-                        <?php foreach ($divisi as $row): ?>
-                            <option value="<?= $row->id_divisi; ?>"><?= $row->divisi; ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password" required>
-                </div>
-                <div class="form-group">
-                    <label for="foto">Foto</label>
-                    <input type="file" class="form-control" id="foto" name="gambar" placeholder="Masukkan foto" required>
-                </div>
-                <div class="form-group">
-                    <label for="tandatangan">Tanda Tangan</label>
-                    <input type="file" class="form-control" id="tandatangan" name="gambar_ttd" placeholder="Masukkan Tanda Tangan" required>
-                </div>
-                <button type="submit" class="btn btn-success">Simpan</button>
-            </form>
+                <form id="formTambahDivisi" action="<?= base_url('tambah_user')?>" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nip">NIP</label>
+                        <input type="text" class="form-control" id="nip" name="nip" placeholder="Masukkan NIP" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_divisi">Level</label>
+                        <select class="form-control" id="id_level" name="id_level" required>
+                            <option value="">Pilih Level</option>
+                            <?php foreach ($level as $row): ?>
+                                <option value="<?= $row->id_level; ?>"><?= $row->level; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    <div class="form-group">
+                        <label for="id_divisi" id="label_divisi">Divisi</label>
+                        <select class="form-control" id="id_divisi" name="id_divisi" required>
+                            <option value="">Pilih Divisi</option>
+                            <?php foreach ($divisi as $row): ?>
+                                <option value="<?= $row->id_divisi; ?>"><?= $row->divisi; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto">Foto</label>
+                        <input type="file" class="form-control" id="foto" name="gambar" placeholder="Masukkan foto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tandatangan">Tanda Tangan</label>
+                        <input type="file" class="form-control" id="tandatangan" name="gambar_ttd" placeholder="Masukkan Tanda Tangan" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Simpan</button>
+                </form>
                 <!-- Akhir Form Tambah Divisi -->
             </div>
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Hide the id_divisi dropdown initially
+        $('#label_divisi').hide();
+        $('#id_divisi').hide();
+
+        // Add change event listener to id_level dropdown
+        $('#id_level').change(function () {
+            // Check if the selected id_level is not 5
+            if ($(this).val() !== '5') {
+                // Hide the id_divisi dropdown if id_level is 5
+                $('#label_divisi').hide();
+                $('#id_divisi').hide();
+                $('#id_divisi').val('5');
+            } else {
+                // Show the id_divisi dropdown
+                $('#label_divisi').show();
+                $('#id_divisi').show();
+            }
+        });
+    });
+</script>

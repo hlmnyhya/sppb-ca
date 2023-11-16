@@ -17,14 +17,13 @@
             </div>
         </div>
     </div>
-
     
-      <div class="container-fluid">
-         <?php if ($this->session->flashdata('pesan')): ?>
-              <?= $this->session->flashdata('pesan'); ?>
-          <?php endif; ?>
-         <?php if ($this->session->flashdata('error')): ?>
-              <?= $this->session->flashdata('error'); ?>
+    <div class="container-fluid">
+        <?php if ($this->session->flashdata('pesan')): ?>
+        <?= $this->session->flashdata('pesan'); ?>
+        <?php endif; ?>
+        <?php if ($this->session->flashdata('error')): ?>
+        <?= $this->session->flashdata('error'); ?>
           <?php endif; ?>
         <div class="card">
           <div class="card-body">

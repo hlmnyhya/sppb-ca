@@ -51,7 +51,7 @@
             <div class="container p-lg-5">
                 <div class="carousel-inner">
                     <div class="carousel-item active p-lg-5">
-                                <h1 class="banner_taital">SISTEM PERMOHONAN<br>PERMINTAAN BARANG</h1>
+                                <h1 class="banner_taital">SURAT PERMOHONAN<br>PERMINTAAN BARANG</h1>
                                     <div class="buynow_bt">
                                         <a href="<?php echo base_url('login'); ?>" title="Login" class="nav-link" aria-expanded="true">Login</a>
                                     </div>

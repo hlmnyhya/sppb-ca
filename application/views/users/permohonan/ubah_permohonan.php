@@ -30,7 +30,7 @@
           <div class="card-body">
               <!-- Form Tambah User -->
                 <?php foreach ($users as $user) : ?>
-                <form id="formTambahUser" action="<?= base_url('tambah_permohonan_item')?>" method="POST"
+                <form id="formTambahUser" action="<?= base_url('users_ubah_permohonan_item')?>" method="POST"
                     enctype="multipart/form-data">
                    <div class="form-group">
                         <label for="nomor_sppb">Nomor SPPB</label>

@@ -97,7 +97,7 @@
             </div>
             <div class="modal-body">
                 <!-- Form Tambah User -->
-                <form id="formTambahUser" action="<?= base_url('tambah_permohonan')?>" method="POST"
+                <form id="formTambahUser" action="<?= base_url('users_tambah_permohonan_users')?>" method="POST"
                     enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nomor_sppb">Nomor SPPB</label>
@@ -126,6 +126,7 @@
                         <label for="status">Status</label>
                         <select class="form-control" id="status" name="status" required>
                             <option value="">Pilih Status</option>
+                            <option value="Diajukan">Diajukan</option>
                             <option value="Diperiksa">Diperiksa</option>
                             <option value="Disetujui">Disetujui</option>
                         </select>

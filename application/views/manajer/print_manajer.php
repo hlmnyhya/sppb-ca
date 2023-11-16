@@ -123,7 +123,6 @@
                     <th class="text-center">SUB ITEM</th>
                     <th class="text-center">URAIAN</th>
                     <th class="text-center">SAT</th>
-                    <th class="text-center">STOK</th>
                     <th class="text-center">FISIK</th>
                     <th class="text-center">KETERANGAN</th>
 
@@ -138,7 +137,6 @@
                         <td><?php echo $d->nama_sub_item ?></td>
                         <td><?php echo $d->uraian ?></td>
                         <td><?php echo $d->satuan ?></td>
-                        <td><?php echo $d->stok ?></td>
                         <td><?php echo $d->fisik ?></td>
                         <td><?php echo $d->keterangan ?></td>
                     </tr>

@@ -114,7 +114,7 @@ WHERE trans_item.id_trans_item = '$id_trans_item';")->result();
         </div>');
     }
 
-    redirect('permohonan_users');
+    redirect('users_permohonan_users');
 }
 
 	public function edit_permohonan($id_permohonan)
@@ -160,7 +160,7 @@ WHERE trans_item.id_trans_item = '$id_trans_item';")->result();
         </div>');
     }
 
-    redirect('permohonan_users');
+    redirect('users_permohonan_users');
 }
 
 	public function tambah_data_aksi_item() 
@@ -195,7 +195,7 @@ WHERE trans_item.id_trans_item = '$id_trans_item';")->result();
 	        </div>');
 	    }
 
-		redirect('permohonan_users');
+		redirect('users_permohonan_users');
 	}
 
 
@@ -235,7 +235,7 @@ WHERE trans_item.id_trans_item = '$id_trans_item';")->result();
         </div>');
     }
 
-    redirect('permohonan_users');
+    redirect('users_permohonan_users');
 }
 	public function delete_data_aksi_permohonan($id_permohonan)
 {
@@ -257,7 +257,7 @@ WHERE trans_item.id_trans_item = '$id_trans_item';")->result();
             </button>
         </div>');
     }
-    redirect('permohonan_users');
+    redirect('users_permohonan_users');
 }
 	public function delete_data_aksi_permohonan_item($id_trans_item)
 {
@@ -279,7 +279,7 @@ WHERE trans_item.id_trans_item = '$id_trans_item';")->result();
             </button>
         </div>');
     }
-    redirect('permohonan_users');
+    redirect('users_permohonan_users');
 }
 
 }
