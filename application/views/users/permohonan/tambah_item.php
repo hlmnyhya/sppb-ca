@@ -76,11 +76,6 @@
                                 placeholder="Masukkan Satuan" required>
                             </div>
                             <div class="form-group">
-                                <label for="stok">Stok</label>
-                                <input type="text" class="form-control" id="stok" name="stok"
-                                placeholder="Masukkan Jumlah Stok" required>
-                            </div>
-                            <div class="form-group">
                                 <label for="fisik">Fisik</label>
                                 <input type="text" class="form-control" id="fisik" name="fisik"
                                 placeholder="Masukkan Jumlah Fisik" required>

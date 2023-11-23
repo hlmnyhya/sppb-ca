@@ -11,7 +11,6 @@ class M_item extends CI_Model
     {
        return $this->db->insert($table, $data);
     }
-
     public function update_data($table, $data, $where)
     {
         return $this->db->update($table, $data, $where);

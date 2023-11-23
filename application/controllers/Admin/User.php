@@ -154,6 +154,8 @@ class User extends CI_Controller {
     $id_divisi = htmlspecialchars($this->input->post('id_divisi'));
     $id_level = htmlspecialchars($this->input->post('id_level'));
     $username = htmlspecialchars($this->input->post('username'));
+	$password = md5($this->input->post('password')); 
+
 
     // Memeriksa apakah ada penggantian gambar profil
     if ($_FILES['gambar']['error'] != 4) {
@@ -197,6 +199,7 @@ class User extends CI_Controller {
         'id_divisi' => $id_divisi,
         'id_level' => $id_level,
         'username' => $username,
+		'password' => $password,
     );
 
     // Menambahkan kolom gambar ke data jika ada perubahan gambar profil
