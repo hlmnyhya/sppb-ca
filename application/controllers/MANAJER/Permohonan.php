@@ -51,11 +51,13 @@ class Permohonan extends CI_Controller {
     if ($status != 'Disetujui') {
         // Ambil ttd_ktu dari session
         $ttd_manajer = $this->session->userdata('gambar_ttd');
+        $nama_manajer = $this->session->userdata('nama');
 
         // Data yang akan diupdate
         $update_data = array(
             'status' => 'Disetujui',
-            'ttd_manajer' => $ttd_manajer // Memasukkan ttd_ktu dari session ke dalam kolom ttd_ktu
+            'ttd_manajer' => $ttd_manajer,
+            'nama_manajer' => $nama_manajer,
         );
 
         // Lakukan update data
@@ -87,11 +89,12 @@ public function update_disetujui_maintenance($id_permohonan)
     if ($status != 'Disetujui') {
         // Ambil ttd_ktu dari session
         $ttd_manajer = $this->session->userdata('gambar_ttd');
-
+        $nama_manajer = $this->session->userdata('nama');
         // Data yang akan diupdate
         $update_data = array(
             'status' => 'Disetujui',
-            'ttd_manajer' => $ttd_manajer // Memasukkan ttd_ktu dari session ke dalam kolom ttd_ktu
+            'ttd_manajer' => $ttd_manajer,
+            'nama_manajer' => $nama_manajer,
         );
 
         // Lakukan update data
@@ -123,11 +126,12 @@ public function update_disetujui_lab($id_permohonan)
     if ($status != 'Disetujui') {
         // Ambil ttd_ktu dari session
         $ttd_manajer = $this->session->userdata('gambar_ttd');
-
+        $nama_manajer = $this->session->userdata('nama');
         // Data yang akan diupdate
         $update_data = array(
             'status' => 'Disetujui',
-            'ttd_manajer' => $ttd_manajer // Memasukkan ttd_ktu dari session ke dalam kolom ttd_ktu
+            'ttd_manajer' => $ttd_manajer,
+            'nama_manajer' => $nama_manajer,
         );
 
         // Lakukan update data
@@ -159,11 +163,12 @@ public function update_disetujui_kantor($id_permohonan)
     if ($status != 'Disetujui') {
         // Ambil ttd_ktu dari session
         $ttd_manajer = $this->session->userdata('gambar_ttd');
-
+        $nama_manajer = $this->session->userdata('nama');
         // Data yang akan diupdate
         $update_data = array(
             'status' => 'Disetujui',
-            'ttd_manajer' => $ttd_manajer // Memasukkan ttd_ktu dari session ke dalam kolom ttd_ktu
+            'ttd_manajer' => $ttd_manajer,
+            'nama_manajer' => $nama_manajer,
         );
 
         // Lakukan update data

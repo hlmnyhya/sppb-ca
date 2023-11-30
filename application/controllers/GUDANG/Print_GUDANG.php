@@ -6,7 +6,7 @@ class Print_GUDANG extends CI_Controller {
     public function cetak_gudang($id_permohonan)
     {
         $where = array('id_permohonan' => $id_permohonan);
-        $data['print'] = $this->db->query("SELECT ti.`id_trans_item`, ti.`id_permohonan`, ti.`id_master_item`, ti.`id_sub_item`, ti.`kode`, ti.`satuan`, ti.`stok`, ti.`fisik`, ti.`uraian`, ti.`keterangan`,
+        $data['print'] = $this->db->query("SELECT ti.`id_trans_item`, ti.`id_permohonan`, ti.`id_master_item`, ti.`id_sub_item`, ti.`kode`, ti.`satuan`, ti.`fisik`, ti.`uraian`, ti.`keterangan`,
         p.`nomor_sppb`, p.`nama_pemohon`, p.`tanggal`, p.`status`,p.`ttd_ktu`, p.`ttd_pemohon`, p.`ttd_manajer`,
         mi.`nama_item`,
         si.`nama_sub_item`,
@@ -19,7 +19,7 @@ class Print_GUDANG extends CI_Controller {
         JOIN `divisi` d ON p.`id_divisi` = d.`id_divisi`
         JOIN `users` u ON p.`id_users` = u.`id_users`
         WHERE p.`id_permohonan` = ?;", array($id_permohonan))->result();
-        $data['ttd'] = $this->db->query("SELECT ttd_ktu, ttd_pemohon, ttd_manajer FROM permohonan WHERE id_permohonan = ?;", array($id_permohonan))->result();
+        $data['ttd'] = $this->db->query("SELECT nama_pemohon, nama_pemeriksa, nama_manajer, ttd_ktu, ttd_pemohon, ttd_manajer FROM permohonan WHERE id_permohonan = ?;", array($id_permohonan))->result();
         $data['title'] = "SPPB";
         $this->load->view('template/header',$data);
         $this->load->view('gudang/print_gudang', $data);

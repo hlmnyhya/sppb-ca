@@ -30,10 +30,10 @@ class M_divisi extends CI_Model
         return $query;
     }
 
-    public function tampil_divisi()
-    {
-        return  $this->db->query("SELECT * FROM divisi")->result();
-    }
+        public function tampil_divisi()
+        {
+            return  $this->db->query("SELECT * FROM divisi")->result();
+        }
 
     public function get_divisi_by_id($user_id) {
         $this->db->select('divisi.divisi, divisi.id_divisi');

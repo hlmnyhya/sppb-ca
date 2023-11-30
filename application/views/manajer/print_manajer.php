@@ -154,26 +154,26 @@
         if ($status == 'Diajukan') {
             echo '<h5>Diajukan,</h5>';
             echo '<img src="' . base_url('./uploads/ttd/' . $t->ttd_pemohon) . '" alt="user" class="rounded-circle" width="200" height="100">';
-            echo '<h5 style="margin-top: 2px; text-align: center">Saul Membi Sembiring</h5>';
+            echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_pemohon.'</h5>';
             echo '<hr size="" color="black" style="margin-top: 1px;">';
             echo '<h5 style="margin-top: px; text-align: center">Kadiv Harnik</h5>';
         } elseif ($status == 'Diajukan') {
             echo '<h5>Diajukan,</h5>';
             if ($status== 'Diajukan') {
                 echo '<br><br><br><br><br>';
-                echo '<h5 style="margin-top: 2px; text-align: center">Saul Membi Sembiring</h5>';
+                echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_pemohon.'</h5>';
                 echo '<hr size="" color="black" style="margin-top: 1px;">';
                 echo '<h5 style="margin-top: px; text-align: center">Kadiv Harnik</h5>';
             }else {
                 echo '<img src="' . base_url('./uploads/ttd/' . $t->ttd_pemohon) . '" alt="user" class="rounded-circle" width="200" height="100">';
-                echo '<h5 style="margin-top: 2px; text-align: center">Saul Membi Sembiring</h5>';
+                echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_pemohon.'</h5>';
                 echo '<hr size="" color="black" style="margin-top: 1px;">';
                 echo '<h5 style="margin-top: px; text-align: center">Kadiv Harnik</h5>';
             }
         } elseif ($status == 'Disetujui') {
             echo '<h5>Diajukan,</h5>';
             echo '<img src="' . base_url('./uploads/ttd/' .$t->ttd_pemohon) . '" alt="user" class="rounded-circle" width="200" height="100">';
-            echo '<h5 style="margin-top: 2px; text-align: center">Saul Membi Sembiring</h5>';
+            echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_pemohon.'</h5>';
             echo '<hr size="" color="black" style="margin-top: 1px;">';
             echo '<h5 style="margin-top: px; text-align: center">Kadiv Harnik</h5>';
         } else {
@@ -192,26 +192,26 @@
         if ($status == 'Diperiksa') {
             echo '<h5>Diperiksa,</h5>';
             echo '<img src="' . base_url('./uploads/ttd/' . $t->ttd_ktu) . '" alt="user" class="rounded-circle" width="200" height="100">';
-            echo '<h5 style="margin-top: 2px; text-align: center">Kristeli</h5>';
+            echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_pemeriksa.'</h5>';
             echo '<hr size="" color="black" style="margin-top: 1px;">';
             echo '<h5 style="margin-top: px; text-align: center">pjs KTU</h5>';
         } elseif ($status == 'Diajukan') {
             echo '<h5>Diperiksa,</h5>';
             if ($status== 'Diajukan') {
                 echo '<br><br><br><br><br>';
-                echo '<h5 style="margin-top: 2px; text-align: center">Kristeli</h5>';
+                echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_pemeriksa.'</h5>';
                 echo '<hr size="" color="black" style="margin-top: 1px;">';
                 echo '<h5 style="margin-top: px; text-align: center">pjs KTU</h5>';
             }else {
                 echo '<img src="' . base_url('./uploads/ttd/' . $t->ttd_ktu) . '" alt="user" class="rounded-circle" width="200" height="100">';
-                echo '<h5 style="margin-top: 2px; text-align: center">Kristeli</h5>';
+                echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_pemeriksa.'</h5>';
                 echo '<hr size="" color="black" style="margin-top: 1px;">';
                 echo '<h5 style="margin-top: px; text-align: center">pjs KTU</h5>';
             }
         } elseif ($status == 'Disetujui') {
             echo '<h5>Diperiksa,</h5>';
             echo '<img src="' . base_url('./uploads/ttd/' . $t->ttd_ktu) . '" alt="user" class="rounded-circle" width="200" height="100">';
-            echo '<h5 style="margin-top: 2px; text-align: center">Kristeli</h5>';
+           echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_pemeriksa.'</h5>';
             echo '<hr size="" color="black" style="margin-top: 1px;">';
             echo '<h5 style="margin-top: px; text-align: center">pjs KTU</h5>';
         } else {
@@ -230,26 +230,26 @@
         if ($status == 'Disetujui') {
             echo '<h5>Disetujui,</h5>';
             echo '<img src="' . base_url('./uploads/ttd/' . $t->ttd_manajer) . '" alt="user" class="rounded-circle" width="200" height="100">';
-            echo '<h5 style="margin-top: 2px; text-align: center">Irsan Nurdiansyah J</h5>';
+            echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_manajer.'</h5>';
             echo '<hr size="" color="black" style="margin-top: 1px;">';
             echo '<h5 style="margin-top: px; text-align: center">Manajer PKS</h5>';
         } elseif ($status == 'Diajukan') {
             echo '<h5>Disetujui,</h5>';
             if ($status== 'Diajukan') {
                 echo '<br><br><br><br><br>';
-                echo '<h5 style="margin-top: 2px; text-align: center">Irsan Nurdiansyah J</h5>';
+                 echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_manajer.'</h5>';
                 echo '<hr size="" color="black" style="margin-top: 1px;">';
                 echo '<h5 style="margin-top: px; text-align: center">Manajer PKS</h5>';
             }else {
                 echo '<img src="' . base_url('./uploads/ttd/' . $t->ttd_manajer) . '" alt="user" class="rounded-circle" width="200" height="100">';
-                echo '<h5 style="margin-top: 2px; text-align: center">Irsan Nurdiansyah J</h5>';
+                 echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_manajer.'</h5>';
                 echo '<hr size="" color="black" style="margin-top: 1px;">';
                 echo '<h5 style="margin-top: px; text-align: center">Manajer PKS</h5>';
             }
         } elseif ($status == 'Disetujui') {
             echo '<h5>Disetujui,</h5>';
             echo '<img src="' . base_url('./uploads/ttd/' . $t->ttd_manajer) . '" alt="user" class="rounded-circle" width="200" height="100">';
-            echo '<h5 style="margin-top: 2px; text-align: center">Irsan Nurdiansyah J</h5>';
+             echo '<h5 style="margin-top: 2px; text-align: center">'.$t->nama_manajer.'</h5>';
             echo '<hr size="" color="black" style="margin-top: 1px;">';
             echo '<h5 style="margin-top: px; text-align: center">Manajer PKS</h5>';
         } else {
