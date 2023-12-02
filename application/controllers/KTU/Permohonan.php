@@ -23,16 +23,11 @@ public function update_diperiksa_proses($id_permohonan)
         $ttd_ktu = $this->session->userdata('gambar_ttd');
             
         $nama_ktu = $this->session->userdata('nama');
-,
-            'nama_ktu' => $nama_ktu, 
-
 
         // Data yang akan diupdate
         $update_data = array(
             'status' => 'Diperiksa',
-                'ttd_ktu' => $ttd_ktu
-                $nama_ktu = $this->session->userdata('nama');
-,
+                'ttd_ktu' => $ttd_ktu,
             'nama_ktu' => $nama_ktu, 
         );
 
