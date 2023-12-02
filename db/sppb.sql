@@ -3,13 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 02, 2023 at 06:32 AM
+-- Generation Time: Dec 02, 2023 at 06:03 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE
+= "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone
+= "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -27,16 +29,21 @@ SET time_zone = "+00:00";
 -- Table structure for table `divisi`
 --
 
-CREATE TABLE `divisi` (
+CREATE TABLE `divisi`
+(
   `id_divisi` int NOT NULL,
-  `divisi` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `divisi` varchar
+(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `divisi`
 --
 
-INSERT INTO `divisi` (`id_divisi`, `divisi`) VALUES
+INSERT INTO `divisi` (`
+id_divisi`,
+`divisi
+`) VALUES
 (1, 'Harnik'),
 (2, 'Maintenance'),
 (3, 'Proses'),
@@ -50,16 +57,21 @@ INSERT INTO `divisi` (`id_divisi`, `divisi`) VALUES
 -- Table structure for table `level`
 --
 
-CREATE TABLE `level` (
+CREATE TABLE `level`
+(
   `id_level` int NOT NULL,
-  `level` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `level` varchar
+(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `level`
 --
 
-INSERT INTO `level` (`id_level`, `level`) VALUES
+INSERT INTO `level` (`
+id_level`,
+`level
+`) VALUES
 (1, 'Admin'),
 (2, 'Manajer'),
 (3, 'KTU'),
@@ -72,16 +84,21 @@ INSERT INTO `level` (`id_level`, `level`) VALUES
 -- Table structure for table `master_item`
 --
 
-CREATE TABLE `master_item` (
+CREATE TABLE `master_item`
+(
   `id_master_item` int NOT NULL,
-  `nama_item` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nama_item` varchar
+(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `master_item`
 --
 
-INSERT INTO `master_item` (`id_master_item`, `nama_item`) VALUES
+INSERT INTO `master_item` (`
+id_master_item`,
+`nama_item
+`) VALUES
 (1, 'PERALATAN / PERLENGKAPAN KERJA'),
 (2, 'WTP ( WATER TREATMENT PLANT )');
 
@@ -91,25 +108,51 @@ INSERT INTO `master_item` (`id_master_item`, `nama_item`) VALUES
 -- Table structure for table `permohonan`
 --
 
-CREATE TABLE `permohonan` (
+CREATE TABLE `permohonan`
+(
   `id_permohonan` int NOT NULL,
   `id_users` int NOT NULL,
-  `nomor_sppb` varchar(255) NOT NULL,
+  `nomor_sppb` varchar
+(255) NOT NULL,
   `id_divisi` int NOT NULL,
-  `nama_pemohon` varchar(255) NOT NULL,
+  `nama_pemohon` varchar
+(255) NOT NULL,
   `tanggal` date NOT NULL,
-  `status` enum('Diajukan','Diperiksa','Disetujui') CHARACTER SET utf8mb4  NOT NULL,
-  `ttd_pemohon` varchar(500) NOT NULL,
-  `ttd_ktu` varchar(500) CHARACTER SET utf8mb4  DEFAULT NULL,
-  `ttd_manajer` varchar(500) CHARACTER SET utf8mb4  DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `status` enum
+('Diajukan','Diperiksa','Disetujui') CHARACTER
+SET utf8mb4
+NOT NULL,
+  `nama_pemeriksa` varchar
+(500) NOT NULL,
+  `nama_manajer` varchar
+(500) NOT NULL,
+  `ttd_pemohon` varchar
+(500) NOT NULL,
+  `ttd_ktu` varchar
+(500) CHARACTER
+SET utf8mb4  DEFAULT
+NULL,
+  `ttd_manajer` varchar
+(500) CHARACTER
+SET utf8mb4  DEFAULT
+NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `permohonan`
 --
 
-INSERT INTO `permohonan` (`id_permohonan`, `id_users`, `nomor_sppb`, `id_divisi`, `nama_pemohon`, `tanggal`, `status`, `ttd_pemohon`, `ttd_ktu`, `ttd_manajer`) VALUES
-(1, 5, '01/SPPB-HARNIK/X/2023', 4, 'Saul Membi Sembiring', '2023-11-02', 'Disetujui', 'ttd_mama1.png', 'ttd1.png', '1167645.png');
+INSERT INTO `permohonan` (`
+id_permohonan`,
+`id_users`,
+`nomor_sppb`,
+`id_divisi
+`, `nama_pemohon`, `tanggal`, `status`, `nama_pemeriksa`, `nama_manajer`, `ttd_pemohon`, `ttd_ktu`, `ttd_manajer`) VALUES
+(1, 5, '01/SPPB-HARNIK/X/2023', 4, 'Saul Membi Sembiring', '2023-11-02', 'Disetujui', 'Kristeli', 'Irsan Nurdiansyah J', 'ttd_mama1.png', 'ttd1.png', '1167645.png'),
+(3, 5, '03/SPPB-HARNIK/X/2023', 4, 'Saul Membi Sembiring', '2023-11-05', 'Disetujui', 'Kristeli', 'Irsan Nurdiansyah J', 'ttd_mama1.png', 'ttd1.png', '1167645.png'),
+(4, 5, '04/SPPB-HARNIK/X/2023', 4, 'Saul Membi Sembiring', '2023-11-23', 'Diajukan', '', '', 'ttd_mama1.png', NULL, NULL),
+(5, 6, '05/SPPB-PROSES/X/2023', 3, 'zainal', '2023-11-23', 'Diajukan', '', '', 'SpongeBob_SquarePants_logo_by_Nickelodeon_svg2.png', 'Picture11.png', NULL),
+(7, 6, '06/SPPB-PROSES/X/2023', 3, 'Zainal', '2023-11-23', 'Diajukan', '', '', 'SpongeBob_SquarePants_logo_by_Nickelodeon_svg2.png', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -117,17 +160,22 @@ INSERT INTO `permohonan` (`id_permohonan`, `id_users`, `nomor_sppb`, `id_divisi`
 -- Table structure for table `sub_item`
 --
 
-CREATE TABLE `sub_item` (
+CREATE TABLE `sub_item`
+(
   `id_sub_item` int NOT NULL,
   `id_master_item` int NOT NULL,
-  `nama_sub_item` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nama_sub_item` varchar
+(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `sub_item`
 --
 
-INSERT INTO `sub_item` (`id_sub_item`, `id_master_item`, `nama_sub_item`) VALUES
+INSERT INTO `sub_item` (`
+id_sub_item`,
+`id_master_item
+`, `nama_sub_item`) VALUES
 (1, 1, 'PERLENGKAPAN / PERALATAN KERJA HARNIK'),
 (3, 1, 'FEED PUM BOILER 1');
 
@@ -137,25 +185,31 @@ INSERT INTO `sub_item` (`id_sub_item`, `id_master_item`, `nama_sub_item`) VALUES
 -- Table structure for table `trans_item`
 --
 
-CREATE TABLE `trans_item` (
+CREATE TABLE `trans_item`
+(
   `id_trans_item` int NOT NULL,
   `id_permohonan` int NOT NULL,
   `id_master_item` int NOT NULL,
   `id_sub_item` int NOT NULL,
-  `kode` varchar(255) NOT NULL,
-  `satuan` varchar(50) NOT NULL,
-  `stok` int NOT NULL,
+  `kode` varchar
+(255) NOT NULL,
+  `satuan` varchar
+(50) NOT NULL,
   `fisik` int NOT NULL,
   `uraian` text NOT NULL,
   `keterangan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `trans_item`
 --
 
-INSERT INTO `trans_item` (`id_trans_item`, `id_permohonan`, `id_master_item`, `id_sub_item`, `kode`, `satuan`, `stok`, `fisik`, `uraian`, `keterangan`) VALUES
-(1, 1, 1, 1, 'AA.A4.48.742.010', 'PCS', 3, 45, 'SEAL TAPE (ISOLATIP)', 'PERLENGKAPAN KERJA HARNIK');
+INSERT INTO `trans_item` (`
+id_trans_item`,
+`id_permohonan
+`, `id_master_item`, `id_sub_item`, `kode`, `satuan`, `fisik`, `uraian`, `keterangan`) VALUES
+(1, 1, 1, 1, 'AA.A4.48.742.010', 'PCS', 45, 'SEAL TAPE (ISOLATIP)', 'PERLENGKAPAN KERJA HARNIK'),
+(2, 3, 1, 1, 'AA.A4.48.742.010', 'PCS', 6, 'TEST', 'QWEQWE');
 
 -- --------------------------------------------------------
 
@@ -163,30 +217,52 @@ INSERT INTO `trans_item` (`id_trans_item`, `id_permohonan`, `id_master_item`, `i
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `users`
+(
   `id_users` int NOT NULL,
   `id_level` int NOT NULL,
-  `nama` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
-  `nip` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
+  `nama` varchar
+(255) CHARACTER
+SET utf8mb4
+NOT NULL,
+  `nip` varchar
+(255) CHARACTER
+SET utf8mb4
+NOT NULL,
   `id_divisi` int NOT NULL,
-  `username` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
-  `gambar` varchar(500) NOT NULL,
-  `gambar_ttd` varchar(500) CHARACTER SET utf8mb4  NOT NULL,
+  `username` varchar
+(255) CHARACTER
+SET utf8mb4
+NOT NULL,
+  `password` varchar
+(255) CHARACTER
+SET utf8mb4
+NOT NULL,
+  `gambar` varchar
+(500) NOT NULL,
+  `gambar_ttd` varchar
+(500) CHARACTER
+SET utf8mb4
+NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id_users`, `id_level`, `nama`, `nip`, `id_divisi`, `username`, `password`, `gambar`, `gambar_ttd`, `created_at`, `updated_at`) VALUES
+INSERT INTO `users` (`
+id_users`,
+`id_level`,
+`nama
+`, `nip`, `id_divisi`, `username`, `password`, `gambar`, `gambar_ttd`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Ruby', '12312', 4, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'spongebob_png_vector_2_by_carlosoof10_df88x1u-pre.png', 'ttd.png', '2023-10-31 16:12:54', '2023-10-31 16:12:54'),
-(2, 3, 'Kristeli', '12345', 4, 'kristeli', 'a61c180885b13b558ae49eca94bcb75d', 'CA_BARU.png', 'ttd1.png', '2023-10-31 18:38:04', '2023-10-31 18:38:04'),
+(2, 3, 'Kristeli', '12345', 5, 'kristeli', 'fc9c2b269df2f98745f3e8e9e745e858', 'LUNIK_ANUGRAH.png', 'Picture11.png', '2023-10-31 18:38:04', '2023-10-31 18:38:04'),
 (3, 4, 'Rizka', '123545', 3, 'rizka', 'aef2c231d5e776c0e0656eaf68767848', 'icon.png', 'ttd_mama.png', '2023-10-31 22:32:09', '2023-10-31 22:32:09'),
 (4, 2, 'Irsan', '2314567', 5, 'irsan', '8a97fb7c04a7a82eb7aca56c8a27934a', 'olseller.jpg', '1167645.png', '2023-10-31 22:48:28', '2023-10-31 22:48:28'),
-(5, 5, 'Saul Membi Sembiring', '2314567', 4, 'saulmembi', '865cafd58dfc1cbfecb28316a33c2393', '2.jpg', 'ttd_mama1.png', '2023-11-01 15:58:19', '2023-11-01 15:58:19');
+(5, 5, 'Saul Membi Sembiring', '2314567', 4, 'saulmembi', '865cafd58dfc1cbfecb28316a33c2393', '2.jpg', 'ttd_mama1.png', '2023-11-01 15:58:19', '2023-11-01 15:58:19'),
+(6, 5, 'Zainal', '765432', 3, 'zainal', '5486718b3496396344b004e2fb6eabda', 'doraemon-logo-E53B3D2D97-seeklogo_com3.png', 'SpongeBob_SquarePants_logo_by_Nickelodeon_svg2.png', '2023-11-03 10:23:46', '2023-11-03 10:23:46');
 
 --
 -- Indexes for dumped tables
@@ -196,51 +272,66 @@ INSERT INTO `users` (`id_users`, `id_level`, `nama`, `nip`, `id_divisi`, `userna
 -- Indexes for table `divisi`
 --
 ALTER TABLE `divisi`
-  ADD PRIMARY KEY (`id_divisi`);
+ADD PRIMARY KEY
+(`id_divisi`);
 
 --
 -- Indexes for table `level`
 --
 ALTER TABLE `level`
-  ADD PRIMARY KEY (`id_level`);
+ADD PRIMARY KEY
+(`id_level`);
 
 --
 -- Indexes for table `master_item`
 --
 ALTER TABLE `master_item`
-  ADD PRIMARY KEY (`id_master_item`);
+ADD PRIMARY KEY
+(`id_master_item`);
 
 --
 -- Indexes for table `permohonan`
 --
 ALTER TABLE `permohonan`
-  ADD PRIMARY KEY (`id_permohonan`),
-  ADD KEY `id_divisi` (`id_divisi`),
-  ADD KEY `id_users` (`id_users`);
+ADD PRIMARY KEY
+(`id_permohonan`),
+ADD KEY `id_divisi`
+(`id_divisi`),
+ADD KEY `id_users`
+(`id_users`);
 
 --
 -- Indexes for table `sub_item`
 --
 ALTER TABLE `sub_item`
-  ADD PRIMARY KEY (`id_sub_item`),
-  ADD KEY `id_item` (`id_master_item`);
+ADD PRIMARY KEY
+(`id_sub_item`),
+ADD KEY `id_item`
+(`id_master_item`);
 
 --
 -- Indexes for table `trans_item`
 --
 ALTER TABLE `trans_item`
-  ADD PRIMARY KEY (`id_trans_item`),
-  ADD KEY `id_permohonan` (`id_permohonan`),
-  ADD KEY `id_master_item` (`id_master_item`),
-  ADD KEY `id_sub_item` (`id_sub_item`);
+ADD PRIMARY KEY
+(`id_trans_item`),
+ADD KEY `id_permohonan`
+(`id_permohonan`),
+ADD KEY `id_master_item`
+(`id_master_item`),
+ADD KEY `id_sub_item`
+(`id_sub_item`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_users`),
-  ADD KEY `id_divisi` (`id_divisi`),
-  ADD KEY `id_level` (`id_level`);
+ADD PRIMARY KEY
+(`id_users`),
+ADD KEY `id_divisi`
+(`id_divisi`),
+ADD KEY `id_level`
+(`id_level`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -268,7 +359,7 @@ ALTER TABLE `master_item`
 -- AUTO_INCREMENT for table `permohonan`
 --
 ALTER TABLE `permohonan`
-  MODIFY `id_permohonan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_permohonan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sub_item`
@@ -280,13 +371,13 @@ ALTER TABLE `sub_item`
 -- AUTO_INCREMENT for table `trans_item`
 --
 ALTER TABLE `trans_item`
-  MODIFY `id_trans_item` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_trans_item` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_users` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_users` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -296,29 +387,45 @@ ALTER TABLE `users`
 -- Constraints for table `permohonan`
 --
 ALTER TABLE `permohonan`
-  ADD CONSTRAINT `permohonan_ibfk_1` FOREIGN KEY (`id_divisi`) REFERENCES `divisi` (`id_divisi`),
-  ADD CONSTRAINT `permohonan_ibfk_2` FOREIGN KEY (`id_users`) REFERENCES `users` (`id_users`);
+ADD CONSTRAINT `permohonan_ibfk_1` FOREIGN KEY
+(`id_divisi`) REFERENCES `divisi`
+(`id_divisi`),
+ADD CONSTRAINT `permohonan_ibfk_2` FOREIGN KEY
+(`id_users`) REFERENCES `users`
+(`id_users`);
 
 --
 -- Constraints for table `sub_item`
 --
 ALTER TABLE `sub_item`
-  ADD CONSTRAINT `sub_item_ibfk_1` FOREIGN KEY (`id_master_item`) REFERENCES `master_item` (`id_master_item`);
+ADD CONSTRAINT `sub_item_ibfk_1` FOREIGN KEY
+(`id_master_item`) REFERENCES `master_item`
+(`id_master_item`);
 
 --
 -- Constraints for table `trans_item`
 --
 ALTER TABLE `trans_item`
-  ADD CONSTRAINT `trans_item_ibfk_1` FOREIGN KEY (`id_permohonan`) REFERENCES `permohonan` (`id_permohonan`),
-  ADD CONSTRAINT `trans_item_ibfk_2` FOREIGN KEY (`id_master_item`) REFERENCES `master_item` (`id_master_item`),
-  ADD CONSTRAINT `trans_item_ibfk_3` FOREIGN KEY (`id_sub_item`) REFERENCES `sub_item` (`id_sub_item`);
+ADD CONSTRAINT `trans_item_ibfk_1` FOREIGN KEY
+(`id_permohonan`) REFERENCES `permohonan`
+(`id_permohonan`),
+ADD CONSTRAINT `trans_item_ibfk_2` FOREIGN KEY
+(`id_master_item`) REFERENCES `master_item`
+(`id_master_item`),
+ADD CONSTRAINT `trans_item_ibfk_3` FOREIGN KEY
+(`id_sub_item`) REFERENCES `sub_item`
+(`id_sub_item`);
 
 --
 -- Constraints for table `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id_divisi`) REFERENCES `divisi` (`id_divisi`),
-  ADD CONSTRAINT `users_ibfk_2` FOREIGN KEY (`id_level`) REFERENCES `level` (`id_level`);
+ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY
+(`id_divisi`) REFERENCES `divisi`
+(`id_divisi`),
+ADD CONSTRAINT `users_ibfk_2` FOREIGN KEY
+(`id_level`) REFERENCES `level`
+(`id_level`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
