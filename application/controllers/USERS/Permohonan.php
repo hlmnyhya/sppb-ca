@@ -95,7 +95,7 @@ WHERE trans_item.id_trans_item = '$id_trans_item';")->result();
 
     $where = array('id_trans_item' => $id_trans_item); // Kondisi WHERE berdasarkan ID transaksi
 
-    $updated = $this->M_permohonan->update_data($data, 'trans_item', $where); // Panggil fungsi update_data
+    $updated = $this->M_permohonan->update_data('trans_item', $data, $where); // Panggil fungsi update_data
 
     if ($updated) {
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">

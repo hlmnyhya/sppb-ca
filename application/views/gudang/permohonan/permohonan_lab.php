@@ -45,7 +45,7 @@
                     </thead>
                  <tbody>
                     <?php $no=1; foreach ($permohonan as $user): ?>
-                            <?php if ($user->divisi == 'Lab/ERADING'): ?>
+                            <?php if ($user->divisi == 'Lab/GRADING'): ?>
                                 <tr>
                                     <td><?php echo $no++ ?></td>    
                                     <td><?php echo $user->nomor_sppb; ?></td>

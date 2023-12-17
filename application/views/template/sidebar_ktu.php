@@ -251,7 +251,7 @@ $gambar = $this->session->userdata('gambar');
                     </li>
                     <li class="sidebar-item">
                         <a href="<?= base_url('permohonan_lab'); ?>" class="sidebar-link">
-                            <i class="mdi mdi-radioactive"></i><span class="hide-menu">Divisi Lab/ERADING</span>
+                            <i class="mdi mdi-radioactive"></i><span class="hide-menu">Divisi Lab/GRADING</span>
                         </a>
                     </li>
                     <li class="sidebar-item">

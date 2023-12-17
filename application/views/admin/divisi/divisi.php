@@ -25,16 +25,16 @@
       <?php endif; ?>
         <div class="card">
           <div class="card-body">
-            <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#tambahDivisiModal">
+            <!-- <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#tambahDivisiModal">
             <i class="mdi mdi-plus"></i> <span>Tambah Data</span>
-            </button>
+            </button> -->
           <div class="table-responsive">
             <table id="zero_config" class="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Aksi</th>
+                            <!-- <th>Aksi</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -42,11 +42,11 @@
                         <tr>
                             <td><?php echo $no++ ?></td>    
                             <td><?php echo $divisi->divisi; ?></td>
-                            <td>
+                            <!-- <td>
                               <a href="<?php echo base_url('ubah_divisi/'.$divisi->id_divisi); ?>" class="btn btn-warning"><i class="mdi mdi-pencil"></i><span>Ubah</span></a>
                               <a href="<?php echo base_url('hapus_divisi/'.$divisi->id_divisi); ?>" class="btn btn-danger"><i class="mdi mdi-delete"></i><span>Hapus</span></a>
-                              <!-- <a href="<?php echo base_url('detail/'.$divisi->id_divisi); ?>" class="btn btn-info"><i class="mdi mdi-eye"></i><span>Detail</span></a> -->
-                            </td>
+                              <a href="<?php echo base_url('detail/'.$divisi->id_divisi); ?>" class="btn btn-info"><i class="mdi mdi-eye"></i><span>Detail</span></a> 
+                            </td>-->
                         </tr>
                         <?php endforeach; ?>
                     </tbody>

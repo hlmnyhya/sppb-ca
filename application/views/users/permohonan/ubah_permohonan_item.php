@@ -34,6 +34,8 @@
                     enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="kode">Kode</label>
+                        <input type="hidden" class="form-control" id="kode"  value="<?php echo $user->id_permohonan; ?>" name="id_permohonan" placeholder="Masukkan Kode">
+                        <input type="hidden" class="form-control" id="kode"  value="<?php echo $user->id_trans_item; ?>" name="id_trans_item" placeholder="Masukkan Kode">
                         <input type="text" class="form-control" id="kode"  value="<?php echo $user->kode; ?>"name="kode"
                             placeholder="Masukkan Kode">
                     </div>
