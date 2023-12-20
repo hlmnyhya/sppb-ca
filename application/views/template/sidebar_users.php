@@ -192,7 +192,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url('./uploads/profil/' . $this->session->userdata('gambar')); ?>" alt="user" class="rounded-circle" width="20"></a>
                                 <h6 class="text-white"><?= $this->session->userdata('username')?></h6>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                                <div class="dropdown-divider"></div> <a class="dropdown-item" href="<?php echo base_url('profil');?>"><i class="mdi mdi-account m-r-5 m-l-5"></i> Profil</a>
+                                <div class="dropdown-divider"></div> <a class="dropdown-item" href="<?php echo base_url('profil/users');?>"><i class="mdi mdi-account m-r-5 m-l-5"></i> Profil</a>
                                 <div class="dropdown-divider"></div> <a class="dropdown-item" href="<?= base_url('logout'); ?>"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
                             </div>
                             </div>

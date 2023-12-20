@@ -25,8 +25,8 @@ class User extends CI_Controller {
 	{
 		$data['title'] = "Data User | SPPB";
 		$this->load->view('template/header', $data);
-        $this->load->view('template/sidebar_users');
-        $this->load->view('users/profil', $data);
+        $this->load->view('template/sidebar_gudang');
+        $this->load->view('gudang/profil', $data);
         $this->load->view('template/footer');
 	}
 

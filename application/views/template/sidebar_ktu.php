@@ -201,7 +201,7 @@ $gambar = $this->session->userdata('gambar');
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item"
-                              href="<?php echo base_url('profil');?>">
+                              href="<?php echo base_url('profil/ktu');?>">
                                 <i class="mdi mdi-account m-r-5 m-l-5"></i> Profil
                             </a>
                             <div class="dropdown-divider"></div>

@@ -62,6 +62,10 @@ $route['login/auth']= 'Login/process_login';
 
 // Profil
 $route['profil']= 'Admin/User/Profil';
+$route['profil/gudang']= 'GUDANG/User/Profil';
+$route['profil/ktu']= 'KTU/User/Profil';
+$route['profil/manajer']= 'MANAJER/User/Profil';
+$route['profil/users']= 'USERS/User/Profil';
 
 // Dashboard
 $route['dashboard']= 'Admin/Dashboard/index';
